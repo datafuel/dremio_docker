@@ -1,0 +1,17 @@
+version: '3'
+services:
+
+  dremio:
+    image: dremio/dremio-oss
+    ports:  
+      - 9047:9047 
+      - 31010:31010 
+      - 45678:45678
+    volumes:
+      - ./dremio:/opt/dremio/data
+
+networks: 
+  
+  default: 
+    external: 
+      name: datafuel-local-network
