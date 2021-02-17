@@ -3,6 +3,7 @@ services:
 
   dremio:
     image: dremio/dremio-oss
+    container_name: dremio
     ports:  
       - 9047:9047 
       - 31010:31010 
