@@ -9,10 +9,12 @@ services:
       - 31010:31010 
       - 45678:45678
     volumes:
-      - ./dremio:/opt/dremio/data
+      - dremio:/opt/dremio/data
 
 networks: 
-  
   default: 
     external: 
       name: datafuel-local-network
+
+volumes: 
+  dremio:
